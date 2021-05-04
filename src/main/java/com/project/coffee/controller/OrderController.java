@@ -16,7 +16,7 @@ public class OrderController {
 
     @GetMapping("/getOrders")
     public Set<Order> getOrders(){
-        return new HashSet(orderService.getOrders());
+        return orderService.getOrders();
     }
     @GetMapping("/getOrderById/{id}")
     public Order getById(@PathVariable Long id){
@@ -30,7 +30,7 @@ public class OrderController {
     public Order update(@RequestBody Order order){
         return orderService.update(order);
     }
-    @DeleteMapping("/delte/{id}")
+    @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable Long id){
         orderService.delete(id);
     }
