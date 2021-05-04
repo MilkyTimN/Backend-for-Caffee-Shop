@@ -20,7 +20,7 @@ public class ItemController {
     }
 
     @GetMapping("/getByCategory")
-    public List <Item> getByCategory(Category category) {
+    public List <Item> getByCategory(String category) {
         return itemService.getByCategory(category);
     }
 
